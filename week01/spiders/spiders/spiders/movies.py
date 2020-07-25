@@ -18,7 +18,6 @@ class MoviesSpider(scrapy.Spider):
 
     def parse(self, response):
         print(response.url)
-
         movies = Selector(response=response).xpath('//div[@class="movie-hover-info"]') #//dl[@class="movie-list"]
         for movie in movies[:10]:
             item = SpidersItem()

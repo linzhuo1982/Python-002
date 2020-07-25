@@ -1,4 +1,5 @@
 import scrapy
+import lxml.etree
 from spiders.items import SpidersItem
 from scrapy.selector import Selector
 
